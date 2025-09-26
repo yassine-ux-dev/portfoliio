@@ -31,15 +31,17 @@ export default function ProjectCard({
         <h1 className="project-card-title">{project.name}</h1>
 
         {/* Demo Link - Opens video */}
-        <span className="project-card-links">
-          <button
-            onClick={() => setShowVideo(true)}
-            title="View Demo"
-            style={{ background: "none", border: "none", cursor: "pointer" }}
-          >
-            <BsPlayCircle />
-          </button>
-        </span>
+        {project.site_url && (
+          <span className="project-card-links">
+            <button
+              onClick={() => setShowVideo(true)}
+              title="View Demo"
+              style={{ background: "none", border: "none", cursor: "pointer" }}
+            >
+              <BsPlayCircle />
+            </button>
+          </span>
+        )}
 
         {/* GitHub Link */}
         <span className="project-card-links">
