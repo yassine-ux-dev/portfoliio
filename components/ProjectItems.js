@@ -11,10 +11,16 @@ function ProjectItems() {
         {projects
           .filter((project) => project.featured === true)
           .map((project, index) => {
-            const stackList = project.stack.map((item) => {
-              const language = languages.find((x) => x.name === item);
-              return language;
-            });
+            const stackList = project.stack
+              .map((item) => {
+                if (typeof item === "string") {
+                  const language = languages.find((x) => x.name === item);
+                  return language;
+                } else {
+                  return item;
+                }
+              })
+              .filter(Boolean);
             return (
               <ProjectCard
                 key={index}

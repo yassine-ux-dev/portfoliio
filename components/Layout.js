@@ -28,7 +28,9 @@ import Contact from "../components/Contact";
 const StarsCanvas = dynamic(() => import("../components/Canvas/Stars"), {
   ssr: false,
 });
-import Heros from "../components/Heros";
+const Heros = dynamic(() => import("../components/Heros"), {
+  ssr: false,
+});
 import OtherProjectCards from "../components/OtherProjectCards";
 
 const Layout = ({ children }) => {
