@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://portfolio-3zc3.vercel.app/
+
+# Sitemaps
+Sitemap: https://portfolio-3zc3.vercel.app/sitemap.xml
