@@ -1,14 +1,10 @@
-import Link from "next/link";
-import { useEffect } from "react";
+import dynamic from "next/dynamic";
+
+const ImageSection = dynamic(() => import("../components/ImageSection"), {
+  ssr: false,
+});
 
 const Home = () => {
-  console.log(
-    "Heros component rendering",
-    typeof window === "undefined" ? "on server" : "on client"
-  );
-  useEffect(() => {
-    console.log("Heros component mounted on client");
-  }, []);
   return (
     <div className="flex flex-col min-h-screen justify-between lg:px-16">
       {/* Grid container */}
@@ -16,7 +12,7 @@ const Home = () => {
         {/* Text Section */}
         <div className="flex col-span-2 place-self-center justify-between lg:flex-row md:flex-row flex-col flex-shrink ">
           <div className="col-span-1 place-self-center px-4 gap-2">
-            <h1 className="name text-4xl  lg:text-4xl  md:text-2xl mb-4">
+            <h1 className="name text-4xl  lg:text-4xl  md:text-2xl ">
               𝐘𝐚𝐬𝐬𝐢𝐧𝐞 𝐁𝐞𝐧 𝐂𝐡𝐚𝐫𝐫𝐚𝐝𝐚
             </h1>
             <p className="w-full xl:max-w-xl mx-0 xl:mx-0  xl:px-0 mb-6 xl:mb-5  text-left">
@@ -58,11 +54,7 @@ const Home = () => {
           </div>
 
           {/* Image Section */}
-          <div className="flex justify-center items-center  col-span-1">
-            <div className="flex justify-center items-center flex-shrink  w-[250px] h-[250px] lg:w-[400px] lg:h-[400px]   relative">
-              <div className=" box absolute left-1/2 transform -translate-x-1/2 sm:left-0 sm:translate-x-0  md:left-1/2 md:-translate-x-1/2 "></div>
-            </div>
-          </div>
+          <ImageSection />
         </div>
 
         {/* Mouse Scroll - Only on medium and up */}
