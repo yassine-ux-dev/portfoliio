@@ -143,7 +143,9 @@ p {
   justify-content: right;
 }
 .box {
-  object-fit: cover;
+  background-image: url("/Photo.webp?width=700&quality=80");
+  background-size: cover; /* Remove -webkit- prefix for better cross-browser support */
+  background-position: center; /* Changed to 'center' for better visibility */
   margin-top: 80px;
   height: 350px;
   width: 350px;
@@ -212,7 +214,9 @@ p {
   }
 
   .box {
-    object-fit: cover;
+    background-image: url("/Photo.webp?width=700&quality=80");
+    background-size: cover; /* Remove -webkit- prefix for better cross-browser support */
+    background-position: center; /* Changed to 'center' for better visibility */
     margin-top: 90px;
     height: 180px;
     width: 180px;
@@ -293,7 +297,10 @@ span {
     font-size: 10px;
   }
   .box {
-    object-fit: cover;
+    background-image: url("/Photo.webp?width=700&quality=80");
+    background-size: cover; /* Remove -webkit- prefix for better cross-browser support */
+    background-position: center; /* Changed to 'center' for better visibility */
+
     height: 140px;
     width: 140px;
     box-shadow: 10px 5px 5px 5px rgba(230, 228, 228, 0.651);
