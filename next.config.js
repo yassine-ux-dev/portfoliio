@@ -1,5 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  experimental: {
+    modern: true, // génère des bundles ES6+ pour navigateurs modernes
+    polyfillsOptimization: true, // retire polyfills inutiles
+  },
   reactStrictMode: true,
   eslint: {
     ignoreDuringBuilds: true, // هذا هو إعداد تعطيل ESLint عند البناء
