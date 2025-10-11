@@ -4,7 +4,13 @@ import { useRouter } from "next/router";
 import { AnimatePresence, motion } from "framer-motion";
 import Head from "next/head"; // Import Head from next/head
 import { AppProvider } from "../lib/context";
+import dynamic from "next/dynamic";
 
+// Chargement dynamique (ne sera pas inclus dans le bundle initial)
+const HeavyComponent = dynamic(() => import("../components/Heavy"), {
+  ssr: false, // ❌ désactive le rendu côté serveur (optionnel)
+  loading: () => <p>Chargement...</p>, // affiché pendant le chargement
+});
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
 
@@ -26,6 +32,7 @@ function MyApp({ Component, pageProps }) {
       <AppProvider>
         <Layout>
           <Component {...pageProps} />
+          <HeavyComponent />
         </Layout>
       </AppProvider>
     </>
