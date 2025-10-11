@@ -1,13 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  swcMinify: true,
   eslint: {
     ignoreDuringBuilds: true, // هذا هو إعداد تعطيل ESLint عند البناء
   },
-  experimental: {
-    legacyBrowsers: false, // ✅ désactive la transpilation pour anciens navigateurs
-  },
+
   webpack: (config) => {
     config.module.rules.push({
       test: /\.pdf$/,
