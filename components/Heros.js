@@ -1,8 +1,4 @@
-import dynamic from "next/dynamic";
-
-const ImageSection = dynamic(() => import("../components/ImageSection"), {
-  ssr: false,
-});
+import ImageSection from "../components/ImageSection";
 
 const Home = () => {
   return (
