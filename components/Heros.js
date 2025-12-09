@@ -4,6 +4,7 @@ const Home = () => {
   return (
     <div className="flex flex-col min-h-screen justify-between lg:px-16">
       {/* Grid container */}
+<<<<<<< HEAD
       <div className="z-10 grid pt-15 md:pt-24 lg:pt-32 grid-cols-1 lg:grid-cols-2 min-h-screen items-center ">
         {/* Text Section */}
         <div className="flex col-span-2 place-self-center justify-between lg:flex-row md:flex-row flex-col flex-shrink ">
@@ -12,6 +13,16 @@ const Home = () => {
               𝐘𝐚𝐬𝐬𝐢𝐧𝐞 𝐁𝐞𝐧 𝐂𝐡𝐚𝐫𝐫𝐚𝐝𝐚
             </h1>
             <p className="w-full xl:max-w-xl mx-0 xl:mx-0  xl:px-0 mb-6 xl:mb-5  text-left">
+=======
+      <div className="z-10 grid pt-0 md:pt-20 lg:pt-20 grid-cols-1 lg:grid-cols-2 min-h-screen items-start md:items-center ">
+        {/* Text Section */}
+        <div className="flex col-span-2 place-self-start md:place-self-center justify-between lg:flex-row flex-col flex-shrink ">
+          <div className="col-span-1 place-self-center px-4 flex flex-col gap-4 mt-0 md:mt-0">
+            <h1 className="name text-4xl  lg:text-4xl  md:text-2xl ">
+              𝐘𝐚𝐬𝐬𝐢𝐧𝐞 𝐁𝐞𝐧 𝐂𝐡𝐚𝐫𝐫𝐚𝐝𝐚
+            </h1>
+            <div className="w-full xl:max-w-xl mx-0 xl:mx-0  xl:px-0 mb-6 xl:mb-5  text-left">
+>>>>>>> 3e591d6 (Fix mobile layout and improve video player)
               <p className="text-lg sm:text-xl text-gray-300 leading-relaxed max-w-xl mx-auto lg:mx-0">
                 <span className=" text-gray-400 font-bold ">
                   Full Stack Developer.
@@ -20,7 +31,11 @@ const Home = () => {
                 with different technologies. When I'm not coding, I'm likely
                 working on a side project or exploring something new.
               </p>
+<<<<<<< HEAD
             </p>
+=======
+            </div>
+>>>>>>> 3e591d6 (Fix mobile layout and improve video player)
 
             <a
               href="/CV-YassineBenCharrada.pdf"

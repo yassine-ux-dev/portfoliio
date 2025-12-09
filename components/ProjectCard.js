@@ -73,17 +73,27 @@ export default function ProjectCard({
       {showVideo && (
         <div
           className="video-overlay"
+<<<<<<< HEAD
+=======
+          onClick={() => setShowVideo(false)}
+>>>>>>> 3e591d6 (Fix mobile layout and improve video player)
           style={{
             position: "fixed",
             top: 0,
             left: 0,
             width: "100%",
             height: "100%",
+<<<<<<< HEAD
             backgroundColor: "rgba(0,0,0,0.8)",
+=======
+            backgroundColor: "rgba(0,0,0,0.9)",
+            backdropFilter: "blur(8px)",
+>>>>>>> 3e591d6 (Fix mobile layout and improve video player)
             zIndex: 1000,
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
+<<<<<<< HEAD
           }}
         >
           <video
@@ -106,6 +116,46 @@ export default function ProjectCard({
           >
             <IoClose />
           </button>
+=======
+            animation: "fadeIn 0.3s ease-in-out",
+          }}
+        >
+          <div 
+            onClick={(e) => e.stopPropagation()} 
+            style={{ position: "relative", width: "auto", height: "auto", maxWidth: "90%", maxHeight: "90%" }}
+          >
+            <video
+              controls
+              autoPlay
+              playsInline
+              preload="auto"
+              src={project.site_url}
+              style={{ 
+                maxWidth: "100%", 
+                maxHeight: "85vh", 
+                borderRadius: "12px",
+                boxShadow: "0 0 50px rgba(0,0,0,0.5)",
+                outline: "none"
+              }}
+            />
+            <button
+              onClick={() => setShowVideo(false)}
+              className="hover:scale-110 transition-transform duration-200"
+              style={{
+                position: "absolute",
+                top: "-40px",
+                right: "-10px",
+                background: "transparent",
+                border: "none",
+                cursor: "pointer",
+                padding: "5px",
+                color: "white",
+              }}
+            >
+              <IoClose size={35} />
+            </button>
+          </div>
+>>>>>>> 3e591d6 (Fix mobile layout and improve video player)
         </div>
       )}
     </div>
