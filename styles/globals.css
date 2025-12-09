@@ -143,18 +143,15 @@ p {
   justify-content: right;
 }
 .box {
-  position: relative;
-  overflow: hidden;
+  background-image: url("/Photo.webp?width=700&quality=80");
+  background-size: cover; /* Remove -webkit- prefix for better cross-browser support */
+  background-position: center; /* Changed to 'center' for better visibility */
   margin-top: 80px;
   height: 350px;
   width: 350px;
   box-shadow: 10px 5px 5px 5px rgba(230, 228, 228, 0.651);
   animation: animate 5s ease-in-out infinite;
   transition: all 1s ease-in-out;
-}
-
-.box img {
-  border-radius: inherit;
 }
 
 @keyframes animate {
@@ -217,6 +214,9 @@ p {
   }
 
   .box {
+    background-image: url("/Photo.webp?width=700&quality=80");
+    background-size: cover; /* Remove -webkit- prefix for better cross-browser support */
+    background-position: center; /* Changed to 'center' for better visibility */
     margin-top: 20px;
     height: 180px;
     width: 180px;
