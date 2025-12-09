@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from "react";
+import Image from "next/image";
 import { FaGithub } from "react-icons/fa";
 import { BsPlayCircle } from "react-icons/bs";
 import { IoClose } from "react-icons/io5";
@@ -24,7 +25,15 @@ export default function ProjectCard({
         className="project-card-img"
         style={{ transform: `${reverse ? "translateX(5rem)" : ""}` }}
       >
-        <img src={project.image || "/placeholder.svg"} alt="" />
+        <Image
+          src={project.image || "/placeholder.svg"}
+          alt={project.name || "Project image"}
+          width={476}
+          height={343}
+          sizes="(max-width: 768px) 100vw, 476px"
+          style={{ objectFit: "cover", width: "100%", height: "auto" }}
+          loading="lazy"
+        />
       </div>
       <div className="project-card-info">
         <h6 className="project-card-title-featured">featured project</h6>

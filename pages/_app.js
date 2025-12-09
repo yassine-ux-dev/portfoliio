@@ -19,6 +19,13 @@ function MyApp({ Component, pageProps }) {
       <Head>
         <link rel="icon" href="/weblogo.png" />
         <title>Yassine Charrada - Full Stack Developer</title>{" "}
+        {/* Preload LCP image for faster rendering */}
+        <link
+          rel="preload"
+          as="image"
+          href="/Photo.webp"
+          fetchPriority="high"
+        />
         <meta
           name="description"
           content="Welcome to my world, I'm Yassine Charrada a Full Stack Developer"
