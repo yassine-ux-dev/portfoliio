@@ -183,11 +183,7 @@ p {
 
 @media (max-width: 480px) {
   .box {
-<<<<<<< HEAD
-    margin-top: 90px;
-=======
     margin-top: 30px;
->>>>>>> 3e591d6 (Fix mobile layout and improve video player)
     height: 280px;
     width: 280px;
   }
@@ -221,11 +217,7 @@ p {
     background-image: url("/Photo.webp?width=700&quality=80");
     background-size: cover; /* Remove -webkit- prefix for better cross-browser support */
     background-position: center; /* Changed to 'center' for better visibility */
-<<<<<<< HEAD
-    margin-top: 90px;
-=======
     margin-top: 20px;
->>>>>>> 3e591d6 (Fix mobile layout and improve video player)
     height: 180px;
     width: 180px;
     box-shadow: 10px 5px 5px 5px rgba(230, 228, 228, 0.651);

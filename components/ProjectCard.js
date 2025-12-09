@@ -73,50 +73,19 @@ export default function ProjectCard({
       {showVideo && (
         <div
           className="video-overlay"
-<<<<<<< HEAD
-=======
           onClick={() => setShowVideo(false)}
->>>>>>> 3e591d6 (Fix mobile layout and improve video player)
           style={{
             position: "fixed",
             top: 0,
             left: 0,
             width: "100%",
             height: "100%",
-<<<<<<< HEAD
-            backgroundColor: "rgba(0,0,0,0.8)",
-=======
             backgroundColor: "rgba(0,0,0,0.9)",
             backdropFilter: "blur(8px)",
->>>>>>> 3e591d6 (Fix mobile layout and improve video player)
             zIndex: 1000,
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
-<<<<<<< HEAD
-          }}
-        >
-          <video
-            controls
-            src={project.site_url}
-            style={{ maxWidth: "80%", maxHeight: "80%" }}
-          />
-          <button
-            onClick={() => setShowVideo(false)}
-            style={{
-              position: "absolute",
-              top: "10px",
-              right: "10px",
-              background: "red",
-              color: "white",
-              border: "none",
-              padding: "10px",
-              cursor: "pointer",
-            }}
-          >
-            <IoClose />
-          </button>
-=======
             animation: "fadeIn 0.3s ease-in-out",
           }}
         >
@@ -155,7 +124,6 @@ export default function ProjectCard({
               <IoClose size={35} />
             </button>
           </div>
->>>>>>> 3e591d6 (Fix mobile layout and improve video player)
         </div>
       )}
     </div>

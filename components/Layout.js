@@ -8,13 +8,7 @@ const ParticlesContainer = dynamic(
   }
 );
 
-<<<<<<< HEAD
-const Nav = dynamic(() => import("../components/Nav"), {
-  ssr: false,
-});
-=======
 import Nav from "../components/Nav";
->>>>>>> 3e591d6 (Fix mobile layout and improve video player)
 
 // font setting
 const poppins = Poppins({
@@ -29,20 +23,10 @@ import About from "../components/About";
 import Experience from "../components/Experience";
 import Projects from "../components/ProjectsBtn";
 import Contact from "../components/Contact";
-<<<<<<< HEAD
-const StarsCanvas = dynamic(() => import("../components/Canvas/Stars"), {
-  ssr: false,
-});
-const Heros = dynamic(() => import("../components/Heros"), {
-  ssr: false,
-});
-=======
 import Heros from "../components/Heros";
 const StarsCanvas = dynamic(() => import("../components/Canvas/Stars"), {
   ssr: false,
 });
-
->>>>>>> 3e591d6 (Fix mobile layout and improve video player)
 import OtherProjectCards from "../components/OtherProjectCards";
 
 const Layout = ({ children }) => {
