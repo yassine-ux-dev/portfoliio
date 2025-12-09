@@ -1,10 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  eslint: {
-    ignoreDuringBuilds: true, // هذا هو إعداد تعطيل ESLint عند البناء
-  },
-
   webpack: (config) => {
     config.module.rules.push({
       test: /\.pdf$/,
@@ -16,7 +12,16 @@ const nextConfig = {
     return config;
   },
   images: {
-    domains: ["upload.wikimedia.org", "www.vectorlogo.zone"],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "upload.wikimedia.org",
+      },
+      {
+        protocol: "https",
+        hostname: "www.vectorlogo.zone",
+      },
+    ],
   },
 };
 
