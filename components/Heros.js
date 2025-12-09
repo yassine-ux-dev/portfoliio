@@ -1,13 +1,20 @@
 import ImageSection from "../components/ImageSection";
+import { motion } from "framer-motion";
+import { fadeIn } from "../utils/motion";
 
 const Home = () => {
   return (
     <div className="flex flex-col min-h-screen justify-between lg:px-16">
       {/* Grid container */}
-      <div className="z-10 grid pt-0 md:pt-20 lg:pt-20 grid-cols-1 lg:grid-cols-2 min-h-screen items-start md:items-center ">
+      <div className="z-10 grid pt-0 md:pt-20 lg:pt-20 grid-cols-1 lg:grid-cols-2 min-h-screen items-start md:items-center mt-10">
         {/* Text Section */}
-        <div className="flex col-span-2 place-self-start md:place-self-center justify-between lg:flex-row flex-col flex-shrink ">
-          <div className="col-span-1 place-self-center px-4 flex flex-col gap-4 mt-0 md:mt-0">
+        <div className="flex col-span-2 place-self-start md:place-self-center justify-between lg:flex-row flex-col flex-shrink items-center">
+          <motion.div 
+            variants={fadeIn("right", "tween", 0.2, 1)}
+            initial="hidden"
+            animate="show"
+            className="col-span-1 place-self-center px-4 flex flex-col gap-4 mt-0 md:mt-0"
+          >
             <h1 className="name text-4xl  lg:text-4xl  md:text-2xl ">
               𝐘𝐚𝐬𝐬𝐢𝐧𝐞 𝐁𝐞𝐧 𝐂𝐡𝐚𝐫𝐫𝐚𝐝𝐚
             </h1>
@@ -22,7 +29,10 @@ const Home = () => {
               </p>
             </div>
 
-            <a
+            <motion.a
+              variants={fadeIn("up", "tween", 0.4, 1)}
+              initial="hidden"
+              animate="show"
               href="/CV-YassineBenCharrada.pdf"
               download="CV-YassineBenCharrada"
               className="bg-[#d3e8d7] hover:bg-[#8f9e92] text-black rounded-2xl 
@@ -46,8 +56,8 @@ const Home = () => {
                   />
                 </svg>
               </span>
-            </a>
-          </div>
+            </motion.a>
+          </motion.div>
 
           {/* Image Section */}
           <ImageSection />
