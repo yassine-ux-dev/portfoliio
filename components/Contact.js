@@ -50,7 +50,7 @@ const Contact = () => {
 
   return (
     <div
-      id="Contact"
+      id="contact"
       className="xl:ml-[300px] xl:flex-row flex-col-reverse flex gap-10 overflow-hidden mb-10"
     >
       <motion.div
